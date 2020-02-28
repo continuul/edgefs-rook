@@ -8,9 +8,10 @@ k8sEdgefsNamespaces: ["rook-edgefs"] # element 0 is a default edgefs cluster nam
 k8sEdgefsMgmtPrefix: rook-edgefs-mgr # edgefs cluster management prefix
 
 #Edgefs csi operatins options
-cluster: cltest #substitution edgefs cluster name for csi operations
-tenant: test    #substitution edgefs tenant name for csi operations
-#serviceFilter: "nfs01" #List of comma delimeted allowed service names to filter
+
+cluster: us-east #substitution edgefs cluster name for csi operations
+tenant: kslab-infra-operator #substitution edgefs tenant name for csi operations
+serviceFilter: "nfs01" #List of comma delimeted allowed service names to filter
 
 # Edgefs connnection options
 username: admin #edgefs k8s cluster grpc connection username

@@ -1,5 +1,15 @@
 # This YAML file contains nginx & csi cinder driver objects,
 # which are necessary to run nginx with csi cinder driver.
+
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: edgefs-nfs-csi-storageclass
+provisioner: io.edgefs.csi.nfs
+parameters:
+  segment: rook-edgefs
+  service: nfs01
+  #tenant: kslab-infra-operator
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
